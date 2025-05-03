@@ -1,0 +1,34 @@
+Arquitectura implementada.
+          * MVC: división de app interactiva
+- Organización del proyecto.
+          * crear el proyecto
+		  * iniciar con los elementos basicos
+		  * conexion de la bd
+		  * uso del recyclervie
+		  * uso de la imagen
+		  
+- Principios de programación aplicados.
+          * POO
+		  
+- BD
+CREATE TABLE "eventos" (
+	"id_eventos"	INTEGER NOT NULL,
+	"nombre"	TEXT,
+	"direccion"	TEXT,
+	"fecha"	TEXT,
+	"imagen"	BLOB,
+	PRIMARY KEY("id_eventos" AUTOINCREMENT)
+);
+
+insert into eventos(nombre, direccion, fecha) values ( "Concurso de Dibujo Infantil","Museo de Arte Moderno 302 Jesús Reyes Heroles San Buenaventura, MEX 50110","29/05/2025");
+
+insert into eventos(nombre, direccion, fecha) values ( "Entrenamiento ChamSys MagicQ","Chauvet Mexico,Avenida De las Partidas 34, 3b Lerma de Villada, MEX 52000","03/06/2025");
+
+CREATE TABLE "favorito" (
+	"id_fav"	INTEGER NOT NULL,
+	"id_evento"	INTEGER,
+	"es_favorito"	INTEGER,
+	PRIMARY KEY("id_fav" AUTOINCREMENT),
+	FOREIGN KEY("id_evento") REFERENCES ""
+);
+
